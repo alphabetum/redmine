@@ -1,0 +1,17 @@
+log/*.log
+tmp/*
+tmp/**/*
+log/*.pid
+.DS_Store
+config/database.yml
+config/backup_fu.yml
+config/amazon_s3.yml
+public/javascripts/all.js
+public/test
+public/stylesheets/compiled/*
+db/sphinx/development
+db/*.sqlite3
+config/development.sphinx.conf
+.autotest
+*.swp
+
