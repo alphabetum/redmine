@@ -12,7 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.home '', :controller => 'welcome'
-  
+  map.root :controller => 'welcome'  
   map.signin 'login', :controller => 'account', :action => 'login'
   map.signout 'logout', :controller => 'account', :action => 'logout'
   
