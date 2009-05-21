@@ -6,6 +6,7 @@ log/*.pid
 config/database.yml
 config/backup_fu.yml
 config/amazon_s3.yml
+config/initializers/session_store.rb
 public/javascripts/all.js
 public/test
 public/stylesheets/compiled/*
