@@ -15,4 +15,6 @@ db/*.sqlite3
 config/development.sphinx.conf
 .autotest
 *.swp
+public/plugin_assets
+vendor/rails
 
