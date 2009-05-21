@@ -274,11 +274,6 @@ ActiveRecord::Schema.define(:version => 20090503121510) do
     t.string  "salt",       :null => false
   end
 
-  create_table "plugin_schema_info", :id => false, :force => true do |t|
-    t.string  "plugin_name"
-    t.integer "version"
-  end
-
   create_table "projects", :force => true do |t|
     t.string   "name",        :limit => 30,  :default => "",   :null => false
     t.text     "description", :limit => 255
