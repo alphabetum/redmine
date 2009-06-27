@@ -17,4 +17,4 @@ config/development.sphinx.conf
 *.swp
 public/plugin_assets
 vendor/rails
-
+files/*
