@@ -18,3 +18,4 @@ config/development.sphinx.conf
 public/plugin_assets
 vendor/rails
 files/*
+

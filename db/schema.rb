@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090503121510) do
+ActiveRecord::Schema.define(:version => 20090704172358) do
 
   create_table "attachments", :force => true do |t|
     t.integer  "container_id",                 :default => 0,  :null => false
@@ -152,7 +152,15 @@ ActiveRecord::Schema.define(:version => 20090503121510) do
     t.string  "name",       :limit => 30, :default => "",    :null => false
     t.integer "position",                 :default => 1
     t.boolean "is_default",               :default => false, :null => false
+    t.string  "type"
   end
+
+  create_table "groups_users", :id => false, :force => true do |t|
+    t.integer "group_id", :null => false
+    t.integer "user_id",  :null => false
+  end
+
+  add_index "groups_users", ["group_id", "user_id"], :name => "groups_users_ids", :unique => true
 
   create_table "issue_categories", :force => true do |t|
     t.integer "project_id",                   :default => 0,  :null => false
@@ -219,8 +227,9 @@ ActiveRecord::Schema.define(:version => 20090503121510) do
   add_index "journals", ["journalized_id", "journalized_type"], :name => "journals_journalized_id"
 
   create_table "member_roles", :force => true do |t|
-    t.integer "member_id", :null => false
-    t.integer "role_id",   :null => false
+    t.integer "member_id",      :null => false
+    t.integer "role_id",        :null => false
+    t.integer "inherited_from"
   end
 
   create_table "members", :force => true do |t|
